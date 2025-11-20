@@ -8,6 +8,8 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const gameRoutes = require("./routes/gameRoutes");
 const userRoutes = require("./routes/userRoutes");
+const authRoutes = require("./routes/authRoutes");
+const reviewRoutes = require("./routes/reviewRoutes");
 
 dotenv.config();
 
@@ -33,6 +35,8 @@ mongoose
 // =======================
 app.use("/api/games", gameRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/reviews", reviewRoutes);
 
 // =======================
 // 🚀 Iniciar servidor
